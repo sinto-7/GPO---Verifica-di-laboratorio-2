@@ -10,8 +10,8 @@ L'applicazione permette agli utenti di gestire una lista di cose da fare diretta
  
 🛠 Tecnologie
  
-HTML5 / CSS3 (Tailwind)
-Vanilla JavaScript (ES6+)
+HTML5 / CSS3
+JavaScript
 Git & GitHub per il versionamento
  
  
@@ -22,12 +22,6 @@ Membri del Team:
  
 Membro A: Sviluppo Feature Priorità (Backend Logic)
 Membro B: Sviluppo Feature Dark Mode & UI
- 
- 
-Collaboratori Docenti (Accesso Garantito):
- 
-simone.arcidiacono@itisdalmine.edu.it
-marco.magni@itisdalmine.edu.it
  
  
 📦 Installazione
