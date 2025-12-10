@@ -89,6 +89,25 @@ namespace GestioneUtenti
         }
 
         /// <summary>
+        /// Elimina un utente dalla lista in base all'ID.
+        /// </summary>
+        /// <param name="idUtente">ID dell'utente da eliminare.</param>
+        static void EliminaUtente(int idUtente)
+        {
+            var utente = utenti.FirstOrDefault(u => u.Id == idUtente);
+
+            if (utente != null)
+            {
+                utenti.Remove(utente);
+                Console.WriteLine($"Eliminato ID: {idUtente}");
+            }
+            else
+            {
+                Console.WriteLine($"ID {idUtente} non trovato.");
+            }
+        }
+
+        /// <summary>
         /// Visualizza il menu principale e gestisce le scelte dell'utente.
         /// </summary>
         static void Menu()
@@ -98,6 +117,7 @@ namespace GestioneUtenti
                 Console.WriteLine("\n=== GESTIONALE UTENTI ===");
                 Console.WriteLine("1. Mostra Utenti");
                 Console.WriteLine("2. Aggiungi Utente");
+                Console.WriteLine("3. Elimina Utente");
                 Console.WriteLine("0. Esci");
 
                 Console.Write("Scegli (0-4): ");
@@ -115,6 +135,18 @@ namespace GestioneUtenti
                         Console.Write("Email: ");
                         string e = Console.ReadLine();
                         AggiungiUtente(n, e);
+                        break;
+                    
+                    case "3":
+                        Console.Write("ID da eliminare: ");
+                        if (int.TryParse(Console.ReadLine(), out int idDel))
+                        {
+                            EliminaUtente(idDel);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Input ID non valido!");
+                        }
                         break;
 
                     case "0":
