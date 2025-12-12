@@ -48,10 +48,10 @@ Chiude il programma.
 🔧 Come eseguire il progetto
 
 Clona il repository:
-git clone https://github.com/tuo-user/tuo-repo.git
+git clone https://github.com/sinto-7/GPO---Verifica-di-laboratorio-2
 
 Entra nella cartella:
-cd tuo-repo
+cd progetto
 
 Compila ed esegui con .NET:
 dotnet run
