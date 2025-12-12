@@ -1,35 +1,80 @@
-# Gestione Utenti Console App 🚀
+🧑‍💼 Gestione Utenti – Console App in C#
 
-Questo progetto è un sistema gestionale semplificato basato su console, scritto in **C#**.  
-L'obiettivo del progetto è simulare un workflow professionale in un team di sviluppo, coprendo aspetti fondamentali come il **versionamento (Git)**, la **documentazione automatica (Doxygen)** e la gestione dei rami (**Branching**).
+Una semplice applicazione console in C# che permette di gestire una lista di utenti mantenuta in memoria.
+Il programma include funzionalità per:
 
-## 📋 Indice
-- [Descrizione](#descrizione)
-- [Funzionalità](#funzionalità)
-- [Tecnologie Utilizzate](#tecnologie-utilizzate)
-- [Installazione e Avvio](#installazione-e-avvio)
-- [Documentazione](#documentazione)
-- [Workflow di Progetto](#workflow-di-progetto)
-- [Autori](#autori)
+-Visualizzare gli utenti salvati
 
-## 📖 Descrizione
-L'applicazione permette di gestire una lista di utenti memorizzata temporaneamente in memoria (RAM). È possibile visualizzare, aggiungere, modificare ed eliminare record, simulando le operazioni CRUD (Create, Read, Update, Delete) di un database reale.
+-Aggiungere nuovi utenti
 
-## ✨ Funzionalità
-- **Visualizzazione**: Lista formattata di tutti gli utenti.
-- **Inserimento**: Aggiunta di nuovi utenti con generazione automatica dell'ID.
-- **Cancellazione**: Rimozione di un utente tramite il suo ID univoco.
-- **Modifica**: Aggiornamento dell'indirizzo email di un utente esistente.
-- **[Nuova Feature X]**: (Esempio: Ricerca utenti per nome) - *In fase di sviluppo sul relativo branch.*
-- **[Nuova Feature Y]**: (Esempio: Esportazione in formato .txt) - *In fase di sviluppo sul relativo branch.*
+-Eliminare utenti tramite ID
 
-## 🛠 Tecnologie Utilizzate
-- **Linguaggio**: C# (.NET Core / .NET Framework)
-- **IDE**: Visual Studio / VS Code
-- **Documentazione**: Doxygen (Standard XML)
-- **Versionamento**: Git & GitHub
+-Modificare utenti tramite ID
 
-## 🚀 Installazione e Avvio
-1. Clonare il repository:
-   ```bash
-   git clone https://github.com/TUO_USERNAME/NOME_REPO.git
+Questo progetto è pensato per esercitarsi con liste, classi modello, menu interattivi e gestione input da console.
+
+📁 Struttura del progetto
+
+Il progetto consiste principalmente in due classi:
+
+✔️ Utente
+Rappresenta un utente con:
+-Id (intero)
+-Nome (stringa)
+-Email (stringa)
+
+✔️ Program
+Contiene:
+Una lista statica di utenti che simula un database in memoria
+Il menu dell’applicazione
+I metodi per mostrare, aggiungere, eliminare e modificare utenti
+
+▶️ Funzionalità
+1. Mostra Utenti
+Stampa in tabella tutti gli utenti presenti nella lista.
+
+2. Aggiungi Utente
+Richiede:
+-Nome
+-Email
+Genera automaticamente un nuovo ID incrementale.
+
+3. Elimina Utente
+Richiede un ID valido e lo rimuove dalla lista.
+
+0. Esci
+Chiude il programma.
+
+🔧 Come eseguire il progetto
+
+Clona il repository:
+git clone https://github.com/tuo-user/tuo-repo.git
+
+Entra nella cartella:
+cd tuo-repo
+
+Compila ed esegui con .NET:
+dotnet run
+
+
+Assicurati di avere installato il .NET SDK (6.0 o superiore).
+
+📌 Esempio di utilizzo
+=== GESTIONALE UTENTI ===
+1. Mostra Utenti
+2. Aggiungi Utente
+3. Elimina Utente
+0. Esci
+Scegli (0-4):
+
+🛠️ Tecnologie utilizzate
+
+C#
+.NET Console Application
+Liste generiche (List<T>)
+
+🚀 Possibili miglioramenti futuri
+-Persistenza dei dati su file o database
+-Validazione avanzata input
+-Aggiornamento degli utenti
+-Interfaccia grafica (WinForms/WPF/Web)
