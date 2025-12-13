@@ -1,4 +1,5 @@
 🧑‍💼 Gestione Utenti – Console App in C#
+prodotto da Nardullo Federico e Pinna Andrea
 
 Una semplice applicazione console in C# che permette di gestire una lista di utenti mantenuta in memoria.
 Il programma include funzionalità per:
