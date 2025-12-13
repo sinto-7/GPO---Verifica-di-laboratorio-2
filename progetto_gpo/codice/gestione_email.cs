@@ -108,6 +108,24 @@ namespace GestioneUtenti
         }
 
         /// <summary>
+        /// Aggiorna l'email di un utente specificato dall'ID.
+        /// </summary>
+        /// <param name="idUtente">ID dell'utente da aggiornare.</param>
+        /// <param name="nuovaEmail">Nuovo indirizzo email.</param>
+        /// <returns>True se l'aggiornamento è riuscito, False altrimenti.</returns>
+        static bool AggiornaEmail(int idUtente, string nuovaEmail)
+        {
+            var utente = utenti.FirstOrDefault(u => u.Id == idUtente);
+
+            if (utente != null)
+            {
+                utente.Email = nuovaEmail;
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
         /// Visualizza il menu principale e gestisce le scelte dell'utente.
         /// </summary>
         static void Menu()
@@ -118,6 +136,7 @@ namespace GestioneUtenti
                 Console.WriteLine("1. Mostra Utenti");
                 Console.WriteLine("2. Aggiungi Utente");
                 Console.WriteLine("3. Elimina Utente");
+                Console.WriteLine("4. Aggiorna Email");
                 Console.WriteLine("0. Esci");
 
                 Console.Write("Scegli (0-4): ");
@@ -142,6 +161,25 @@ namespace GestioneUtenti
                         if (int.TryParse(Console.ReadLine(), out int idDel))
                         {
                             EliminaUtente(idDel);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Input ID non valido!");
+                        }
+                        break;
+
+                    case "4":
+                        Console.Write("ID utente: ");
+                        if (int.TryParse(Console.ReadLine(), out int idUpd))
+                        {
+                            Console.Write("Nuova Email: ");
+                            string mail = Console.ReadLine();
+
+                            bool successo = AggiornaEmail(idUpd, mail);
+                            if (successo)
+                                Console.WriteLine("Email aggiornata correttamente.");
+                            else
+                                Console.WriteLine("Operazione fallita (ID non trovato).");
                         }
                         else
                         {
